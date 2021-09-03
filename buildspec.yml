@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands: 
+      - npm install --silent --no-progress -g npm
+      - npm install --silent --no-progress -g --unsafe-perm serverless
+      - npm install --silent --no-progress
+  build:
+    commands:
+      # - npm run-script lint
+      # - npm run test
+      - echo Building pipeline for the environment $ENV
+      - serverless deploy --stage $ENV
+artifacts:
+  files:
+  - target/**/*
+  - serverless.yml
+  - deploy.sh
