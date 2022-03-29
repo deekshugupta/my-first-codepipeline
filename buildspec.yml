@@ -3,9 +3,9 @@ version: 0.2
 phases:
   install:
     commands: 
-      - npm install --silent --no-progress -g npm
-      - npm install --silent --no-progress -g --unsafe-perm serverless
-      - npm install --silent --no-progress
+      - npm install -g npm
+      - npm install serverless
+      - npm install
   build:
     commands:
       # - npm run-script lint
