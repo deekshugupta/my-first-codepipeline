@@ -1,7 +1,0 @@
-version: 0.1
-phases:
-  build:
-    commands:
-      - echo Entered the deploy phase...
-      - echo Deploy started on `date` 
-      - echo Deploying to serverless.
